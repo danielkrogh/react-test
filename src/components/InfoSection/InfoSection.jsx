@@ -1,10 +1,8 @@
 import styles from './InfoSection.module.scss';
 
-console.log(styles.container)
-
 export const InfoSection = (props) => {
     return (
-      <section className={styles.container} style={{backgroundColor: props.info.color}}>
+      <section id={styles.container} style={{backgroundColor: props.info.color}}>
         <article>
           <h2>{props.info.h2}</h2>
           <section>

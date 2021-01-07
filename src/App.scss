@@ -11,14 +11,6 @@
     }
 }
 
-#content {
-    background-color: #ddd;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #main-footer {
     background-color: #eee;
 
@@ -27,5 +19,23 @@
         justify-content: space-around;
         width: 50%;
         margin: auto;
+    }
+}
+
+#teaser-section {
+
+    article {
+        width: 70%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 1rem 0;
+        color: #fff;
+
+        p {
+            color: #8fa7bf;
+            font-size: 40px;
+            text-align: center;
+            font-style: italic;
+        }
     }
 }
