@@ -1,24 +1,18 @@
-export const MainNav = (props) => {
-    let bgColor = props.backgroundColor;
-    let fontColor = props.color;
+import styles from './MainNav.module.scss';
 
-    if (props.darkMode) {
-        bgColor = "#000";
-        fontColor = "#fff"
-    }
 
-    const style = {
-        backgroundColor: bgColor,
-        color: fontColor
-    }
+export const MainNav = () => {
 
     return (
-        <nav id="main-nav" style={style}>
-            <ul>
-                <li>Hjem</li>
-                <li>Om</li>
-                <li>Kontakt</li>
-            </ul>
-        </nav>
+        <header id={styles.container}>
+            <nav>
+                <ul>
+                    <li><a href="/#">Start</a></li>
+                    <li><a href="/#">Dit Co2</a></li>
+                    <li><a href="/#">Clean Up</a></li>
+                    <li><a href="/#">Tilmeld Dig</a></li>
+                </ul>
+            </nav>
+        </header>
     )
 }

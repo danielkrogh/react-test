@@ -20,19 +20,19 @@ export const MainFooter = () => {
                   <article>
                       <h3>Ja tak! Jeg vil gerne høre mere.</h3>
                       <form>
-                          <div className={styles.textInput}>
-                              <input type="text" id={styles.fullName} name="full-name" placeholder="Fulde navn"/>
-                              <input type="text" id={styles.homeTown} name="home-town" placeholder="Hjem by"/>
-                              <input type="email" id={styles.emailAddress} name="email-address" placeholder="Email adresse"/>
-                              <input type="text" id={styles.phoneNumber} name="phone-number" placeholder="Telefon nummer"/>
+                          <div>
+                              <input type="text" id="full-name" name="full-name" placeholder="Fulde navn"/>
+                              <input type="text" id="home-town" name="home-town" placeholder="Hjem by"/>
+                              <input type="email" id="email-address" name="email-address" placeholder="Email adresse"/>
+                              <input type="text" id="phone-number" name="phone-number" placeholder="Telefon nummer"/>
                           </div>
-                          <div className={styles.checkboxInput}>
-                              <div id={styles.containerCall}>
-                                  <label className={styles.checkbox} id={styles.callLabel} htmlFor="call">Få en samtale med Klimatossen</label>
+                          <div>
+                              <div>
+                                  <label className="checkbox" id="call-label" htmlFor="call">Få en samtale med Klimatossen</label>
                                   <input type="checkbox" name="call" id={styles.call}/>
                               </div>
-                              <div id={styles.containerMail}>
-                                  <label className={styles.checkbox} id={styles.mailLabel} htmlFor="mail">Modtag Nyhedsbrev</label>
+                              <div>
+                                  <label className="checkbox" id="mail-label" htmlFor="mail">Modtag Nyhedsbrev</label>
                                   <input type="checkbox" name="mail" id={styles.mail}/>
                               </div>
                           </div>
@@ -44,3 +44,17 @@ export const MainFooter = () => {
       </footer>
     )
 }
+
+// For at få fat i styles klasse?
+// console.log(document.querySelector('.' + styles.button))
+
+// Marker checkbox ved klik på tilhørende label
+let checkboxes = document.querySelectorAll('.checkbox');
+
+console.log(checkboxes);
+
+for (let checkbox of checkboxes) {
+    checkbox.addEventListener('click', function() {
+        checkbox.classList.toggle(styles.checked);
+    })
+};
