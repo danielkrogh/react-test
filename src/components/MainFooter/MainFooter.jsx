@@ -49,7 +49,7 @@ export const MainFooter = () => {
 // console.log(document.querySelector('.' + styles.button))
 
 // Marker checkbox ved klik på tilhørende label
-let checkboxes = document.querySelectorAll('.checkbox');
+const checkboxes = document.querySelectorAll('.checkbox');
 
 console.log(checkboxes);
 
