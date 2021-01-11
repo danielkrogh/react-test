@@ -7,7 +7,7 @@ export const InfoSection = (props) => {
           <h2>{props.info.h2}</h2>
           <section>
             <div>
-              <img src={props.info.img} alt={props.info.h1}/>
+              <img src={require('../../assets/img/' + props.info.img).default} alt={props.info.h1}/>
             </div>
             <article>
               <h3>{props.info.h3}</h3>
